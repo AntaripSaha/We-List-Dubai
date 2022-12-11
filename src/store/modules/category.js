@@ -6,6 +6,7 @@ export default {
         category: {},
         featuredCategories: [],
         allCategoriesWithSubcategories: [],
+        fixedCategoriesWithSubcategories: [],
         generalFilter: [
             { id: FILTER_ALL, name: 'All' },
             { id: FILTER_AVAILABILITY, name: 'Availability' },
@@ -39,6 +40,9 @@ export default {
         },
         UPDATE_ALL_WITH_SUBCATEGORIES(state, categories) {
             state.allCategoriesWithSubcategories = categories
+        },
+        UPDATE_FIXED_WITH_SUBCATEGORIES(state, categories) {
+            state.fixedCategoriesWithSubcategories = categories
         },
     },
     actions: {
@@ -78,6 +82,18 @@ export default {
             this.$axios.get('categories', { params: queryParameters }).then(response => {
                 console.log(response.data.data)
                 commit('UPDATE_ALL_WITH_SUBCATEGORIES', response.data.data)
+            })
+        },
+        getFixedWithSubCategoriesAction({ commit }) {
+            let queryParameters = {
+                'with': 'subCategories',
+                'parent': 'true',
+                'orderBy': 'order',
+                'sortBy': 'asc',
+            }
+            this.$axios.get('categories_fixed', { params: queryParameters }).then(response => {
+                console.log(response.data.data)
+                commit('UPDATE_FIXED_WITH_SUBCATEGORIES', response.data.data)
             })
         },
     },

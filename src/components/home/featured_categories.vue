@@ -20,8 +20,11 @@
         </router-link>
       </div>
     </div>
+    <CategoriesGrid />
+
+
       <!-- <CategoryItem  /> -->
-    <div class='mx-auto custom-height max-w-7xl relative' >
+    <!-- <div class='mx-auto custom-height max-w-7xl relative' >
       <swiper
       :slides-per-view="8"
       :loop="true"
@@ -66,7 +69,7 @@
           </router-link>
         </swiper-slide>
       </swiper>
-    </div>
+    </div> -->
   </div>
 </template>
 <style>
@@ -115,12 +118,15 @@ import CategoryItem from './partial/category_item.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { Autoplay, Pagination, Navigation } from "swiper";
+import CategoriesGrid from '../categories/categories_grid_fixed.vue'
+
 const { mapState, mapActions } = createNamespacedHelpers('category')
 
 
 export default {
   props: ['category'],
   components: {
+    CategoriesGrid,
     Swiper,
     SwiperSlide,
   },

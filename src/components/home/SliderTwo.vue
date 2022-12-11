@@ -49,13 +49,13 @@ export default {
     };
   },
   mounted() {
-    this.getSlidesAction()
+    this.getAdvertiseSlide()
   },
   computed: {
     ...mapState(['slider_two']),
   },
   methods: {
-    ...mapActions(['getSlidesAction']),
+    ...mapActions(['getAdvertiseSlide']),
   },
 }
 </script>

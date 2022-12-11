@@ -4,6 +4,8 @@
   <FeaturedCategories />
   <RecommendedServices />
   <NewestServices />
+  <SliderTwo />
+
   <RealestateServices />
 </template>
 
@@ -11,6 +13,7 @@
 
 import Suppliers from '../components/home/Suppliers.vue'
 import Slider from '../components/home/slider.vue'
+import SliderTwo from '../components/home/SliderTwo.vue'
 import FeaturedCategories from '../components/home/featured_categories.vue'
 import RecommendedServices from '../components/home/recommended_services.vue'
 import NewestServices from '../components/home/newest_members.vue'
@@ -20,6 +23,7 @@ export default {
   components: {
     Suppliers,
     Slider,
+    SliderTwo,
     FeaturedCategories,
     RecommendedServices,
     NewestServices,

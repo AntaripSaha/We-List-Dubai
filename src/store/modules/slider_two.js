@@ -17,7 +17,7 @@ export default {
     },
 
     actions: {
-        getSlidesAction: function({ commit }) {
+        getAdvertiseSlide: function({ commit }) {
             this.$axios.get('slides_center')
                 .then(response => {
                     commit('UPDATE_SLIDES', response.data.data)

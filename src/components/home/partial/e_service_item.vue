@@ -21,13 +21,13 @@
         </div>
         <div class='flex flex-col pt-1 items-end  sm:pt-3'>
           <div v-if='eService.discount_price' class='flex items-center min-w-0 text-sm text-gray-400'>
-            <span class='text-xl font-bold line-through'>{{ this.$filters.formatPrice(eService.discount_price) }} </span>
-            <span class='text-xs '> /{{ $t(eService['price_unit'] || '') }}</span>
+            <span class='text-normal font-bold line-through'>{{ this.$filters.formatPrice(eService.discount_price) }} </span>
+            <!-- <span class='text-sm '> /{{ $t(eService['price_unit'] || '') }}</span> -->
           </div>
           <div class='h-6 flex items-center min-w-0 text-sm'>
             <span class='hidden sm:block text-xs text-second-color-400 mx-2'>{{ $t('Starts From') }}</span>
-            <span class='text-xl font-bold text-main-color-600'>{{ this.$filters.formatPrice(eService.price) }} </span>
-            <span class='text-xs text-main-color-600'> /{{ $t(eService['price_unit'] || '') }}</span>
+            <span class='text-normal font-bold text-main-color-600'>{{ this.$filters.formatPrice(eService.price) }} </span>
+            <!-- <span class='text-sm text-main-color-600'> /{{ $t(eService['price_unit'] || '') }}</span> -->
           </div>
         </div>
       </div>
