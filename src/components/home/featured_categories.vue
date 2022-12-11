@@ -1,6 +1,6 @@
 <template>
 
-  <div class='pt-16 bg-accent-color-50 cus-margin'>
+  <div class='bg-accent-color-50'>
 
     <div class='flex justify-between items-center px-4 py-5 mx-auto max-w-7xl sm:px-6 lg:px-8'>
       <div class='flex-1 min-w-0'>

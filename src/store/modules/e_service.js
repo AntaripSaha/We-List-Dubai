@@ -7,6 +7,8 @@ export default {
         keywords: undefined,
         eService: {},
         recommendedEServices: [],
+        newestEServices:[],
+        realestateEServices:[],
         eServiceReviews: [],
         optionGroups: [],
         eServicesOfCategory: [],
@@ -17,6 +19,12 @@ export default {
         },
         UPDATE_RECOMMENDED_E_SERVICES(state, eServices) {
             state.recommendedEServices = eServices
+        },
+        UPDATE_NEWEST_E_SERVICES(state, eServices) {
+            state.newestEServices = eServices
+        },
+        UPDATE_REALESTATE_E_SERVICES(state, eServices) {
+            state.realestateEServices = eServices
         },
         UPDATE_E_SERVICES_OF_CATEGORY(state, eServices) {
             state.eServicesOfCategory = eServices
@@ -49,6 +57,30 @@ export default {
                 if (response.status === 200 && response.data?.success) {
                     const eServices = response.data.data?.map(element => swipePrices(element))
                     commit('UPDATE_RECOMMENDED_E_SERVICES', eServices)
+                }
+            })
+        },
+        getNewestEServicesAction({ commit }) {
+            let queryParameters = {
+                'only': 'id;name;price;discount_price;price_unit;has_media;media;total_reviews;rate;description',
+                'limit': '8',
+            }
+            this.$axios.get('e_newest_services', { params: queryParameters }).then(response => {
+                if (response.status === 200 && response.data?.success) {
+                    const eServices = response.data.data?.map(element => swipePrices(element))
+                    commit('UPDATE_NEWEST_E_SERVICES', eServices)
+                }
+            })
+        },
+        getRealEstateEServicesAction({ commit }) {
+            let queryParameters = {
+                'only': 'id;name;price;discount_price;price_unit;has_media;media;total_reviews;rate;description',
+                'limit': '8',
+            }
+            this.$axios.get('e_realestate_services', { params: queryParameters }).then(response => {
+                if (response.status === 200 && response.data?.success) {
+                    const eServices = response.data.data?.map(element => swipePrices(element))
+                    commit('UPDATE_REALESTATE_E_SERVICES', eServices)
                 }
             })
         },

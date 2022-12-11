@@ -1,5 +1,5 @@
 <template>
-    <div class='mx-auto max-w-7xl lg:px-8 mb-3 cus-margin' >
+    <div class='pb-5 mx-auto max-w-7xl lg:px-8 cus-margin' >
         <div class='flex justify-between items-center px-4 py-5 mx-auto max-w-7xl sm:px-6 lg:px-8'>
             <div class='flex-1 min-w-0'>
               <h2 class='pb-4 text-xl font-bold lg:text-3xl text-second-color-600 custom-title'>
@@ -156,7 +156,7 @@ export default {
     margin-left: -3%;
   }
   .cus-margin{
-    //margin-top: ;
+    margin-bottom: 0%;
   }
 }
 
