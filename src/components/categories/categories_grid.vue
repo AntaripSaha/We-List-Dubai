@@ -1,7 +1,7 @@
 <template>
   <div class='px-4 py-10 bg-gray-100 sm:px-0'>
     <CategoriesLoader v-if='allCategoriesWithSubcategories.length === 0' />
-    <div v-else class='grid overflow-hidden grid-cols-2 gap-4 px-4 mx-auto max-w-7xl sm:py-6 sm:px-6 lg:px-8 sm:grid-cols-3 lg:grid-cols-5 sm:gap-8'>
+    <div v-else class='grid overflow-hidden grid-cols-2 gap-4 px-4 mx-auto max-w-7xl sm:py-6 sm:px-6 lg:px-8 sm:grid-cols-3 lg:grid-cols-5 sm:gap-5'>
       <div v-for='category in allCategoriesWithSubcategories' :key='category.id'
            class='bg-white rounded-lg'>
         <div class="cus-column mt-2">
@@ -9,7 +9,7 @@
               <img :alt='$filters.transString(category.name)' :src='$filters.getFirstMediaUrl(category)' class="img-custom">
               <!-- <img  src=''> -->
             </div>
-          <h3 class='text-sm font-bold cus-title ml-2'>
+          <h3 class='text-sm font-bold cus-title ml-2 pt-1'>
             <router-link :to="{ name: 'Category', params: { id: category.id }}" class='focus:outline-none text-second-color-600'>
               {{ $filters.transString(category?.name) }}
             </router-link>
@@ -55,7 +55,7 @@ export default {
   margin-bottom: -7%;
  }
  .img-custom{
-  width: 40px;
+  width: 30px;
   height: auto;
 }
 .cus-title{

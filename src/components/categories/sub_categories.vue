@@ -4,7 +4,7 @@
         class='relative bg-white py-2 px-2 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-main-color-600'>
       <div class='min-w-0 flex-1'>
         <router-link :to="{ name: 'Category', params: { id: category.id }}" class='block focus:outline-none'>
-          <p class='font-normal text-second-color-600 truncate'>{{ $filters.transString(category.name) }}</p>
+          <p class='ml-10 font-normal text-second-color-600 truncate'>{{ $filters.transString(category.name) }}</p>
         </router-link>
       </div>
     </li>

@@ -54,7 +54,7 @@
       </div>
       <div class='pt-8 mt-12 border-t border-gray-200'>
         <p class='text-base text-gray-400 xl:text-center'>
-          {{ $t('2022 LaundryMart - OnDemand Laundry Services') }}
+          {{ $t('2022 WeListDubai - OnDemand Services') }}
         </p>
       </div>
     </div>
