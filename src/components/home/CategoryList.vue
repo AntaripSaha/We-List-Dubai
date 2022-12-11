@@ -1,0 +1,21 @@
+<template>
+  <div class='px-4 py-10 bg-gray-100 sm:px-0'>
+    <div class='grid overflow-hidden grid-cols-2 gap-4 px-4 mx-auto max-w-7xl sm:py-6 sm:px-6 lg:px-8 sm:grid-cols-3 lg:grid-cols-6 sm:gap-8'>
+      <div class='bg-white rounded-lg'>
+        <div>
+<!--          <img :alt='' :src='' aria-hidden='true' class='object-contain img-custom'>-->
+        </div>
+        <div class='mt-1 relative p-6 group'>
+          <h3 class='text-lg font-bold'>
+<!--            <router-link :to="{ name: 'Category', params: { id: category.id }}" class='focus:outline-none text-second-color-600'>-->
+<!--              {{ $filters.transString(category?.name) }}-->
+<!--            </router-link>-->
+          </h3>
+          <!-- <SubCategories :subCategories='category?.sub_categories || []' aria-hidden='true' /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
