@@ -15,7 +15,7 @@
       <Duration :duration='eService?.duration' />
     </div>
   </div>
-  <BookingBanner />
+  <!-- <BookingBanner /> -->
 </template>
 
 <script>

@@ -5,7 +5,7 @@
       <div v-for='category in fixedCategoriesWithSubcategories' :key='category.id'
            class='bg-white rounded-lg'>
         <div class="cus-column mt-2">
-            <div class="mr-5">
+            <div class="mr-5 ml-2">
               <img :alt='$filters.transString(category.name)' :src='$filters.getFirstMediaUrl(category)' class="img-custom">
               <!-- <img  src=''> -->
             </div>
