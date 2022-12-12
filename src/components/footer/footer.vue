@@ -54,7 +54,10 @@
       </div>
       <div class='pt-8 mt-12 border-t border-gray-200'>
         <p class='text-base text-gray-400 xl:text-center'>
-          {{ $t('2022 WeListDubai - OnDemand Services') }}
+          <a href="https://easital.com" target="_blank">
+            {{ $t('2022 WeListDubai - Developed By Easital') }}
+
+          </a>
         </p>
       </div>
     </div>

@@ -37,7 +37,7 @@ export default {
             state.eService = eService
         },
         UPDATE_E_SERVICE_REVIEWS(state, reviews) {
-            state.eServiceReviews.push(...reviews)
+            state.eServiceReviews=reviews
         },
 
         UPDATE_E_SERVICE_OPTION_GROUPS(state, optionGroups) {
@@ -51,7 +51,7 @@ export default {
         getRecommendedEServicesAction({ commit }) {
             let queryParameters = {
                 'only': 'id;name;price;discount_price;price_unit;has_media;media;total_reviews;rate;description',
-                'limit': '8',
+                'limit': '10',
             }
             this.$axios.get('e_services', { params: queryParameters }).then(response => {
                 if (response.status === 200 && response.data?.success) {
@@ -63,7 +63,7 @@ export default {
         getNewestEServicesAction({ commit }) {
             let queryParameters = {
                 'only': 'id;name;price;discount_price;price_unit;has_media;media;total_reviews;rate;description',
-                'limit': '8',
+                'limit': '10',
             }
             this.$axios.get('e_newest_services', { params: queryParameters }).then(response => {
                 if (response.status === 200 && response.data?.success) {
@@ -75,7 +75,7 @@ export default {
         getRealEstateEServicesAction({ commit }) {
             let queryParameters = {
                 'only': 'id;name;price;discount_price;price_unit;has_media;media;total_reviews;rate;description',
-                'limit': '8',
+                'limit': '10',
             }
             this.$axios.get('e_realestate_services', { params: queryParameters }).then(response => {
                 if (response.status === 200 && response.data?.success) {

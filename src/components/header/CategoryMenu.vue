@@ -13,51 +13,51 @@
           </div>
           <div class='hidden md:ml-6 md:flex md:space-x-6 rtl:space-x-reverse'>
             <router-link
-              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Home'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Home')}"
+                
               class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/'>
+              to='#'>
               {{ $t('Motors') }}
             </router-link>
             <router-link
               :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Categories'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Categories')}"
               class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/categories'>
+              to='#'>
               {{ $t('Property for Rent') }}
             </router-link>
             <router-link
               :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
               class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/help'>
+              to='#'>
               {{ $t('Property for Sale') }}
             </router-link>
             <router-link
               :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
               class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/help'>
+              to='#'>
+              {{ $t('Classified') }}
+            </router-link>
+            <router-link
+              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
+              class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
+              to='#'>
+              {{ $t('Furniter & Garden') }}
+            </router-link>
+            <router-link
+              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
+              class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
+              to='#'>
+              {{ $t('Mobile & Tablets') }}
+            </router-link>
+            <router-link
+              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
+              class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
+              to='#'>
               {{ $t('Property for Sale') }}
             </router-link>
             <router-link
               :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
               class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/help'>
-              {{ $t('Property for Sale') }}
-            </router-link>
-            <router-link
-              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
-              class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/help'>
-              {{ $t('Property for Sale') }}
-            </router-link>
-            <router-link
-              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
-              class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/help'>
-              {{ $t('Property for Sale') }}
-            </router-link>
-            <router-link
-              :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Help'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Help')}"
-              class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
-              to='/help'>
+              to='#'>
               {{ $t('Property for Sale') }}
             </router-link>
           </div>

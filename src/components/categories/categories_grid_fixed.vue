@@ -9,8 +9,8 @@
               <img :alt='$filters.transString(category.name)' :src='$filters.getFirstMediaUrl(category)' class="img-custom">
               <!-- <img  src=''> -->
             </div>
-          <h3 class='text-normal font-bold cus-title ml-2 pt-1'>
-            <router-link :to="{ name: 'Category', params: { id: category.id }}" class='focus:outline-none text-main-color-600'>
+          <h3 class='text-sm font-bold cus-title ml-2 pt-1'>
+            <router-link :to="{ name: 'Category', params: { id: category.id }}" class='focus:outline-none text-main-color-600' style="color: #e00000;">
               {{ $filters.transString(category?.name) }}
             </router-link>
           </h3>
@@ -51,11 +51,11 @@ export default {
   display: flex;
  }
  .cus-margin{
-  margin-top: -15% !important;
-  margin-bottom: -7%;
+  margin-top: -21% !important;
+  margin-bottom: -9%;
  }
  .img-custom{
-  width: 30px;
+  width: 26px;
   height: auto;
 }
 .cus-title{

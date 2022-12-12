@@ -5,7 +5,6 @@
   <RecommendedServices />
   <NewestServices />
   <SliderTwo />
-
   <RealestateServices />
 </template>
 

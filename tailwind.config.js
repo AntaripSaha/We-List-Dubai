@@ -95,5 +95,7 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('tailwind-scrollbar'),
         require('tailwindcss-dir')(),
+        require('tw-elements/dist/plugin'),
+          
     ],
 }

@@ -18,7 +18,25 @@
                  :src='this.$settings["app_logo"]' class='hidden w-auto h-12 lg:block' />
             <span v-else class='mx-3 font-bold text-second-color-600'>{{ this.$settings['app_name'] }}</span>
           </router-link>
-          <div class='hidden md:ml-6 md:flex md:space-x-6 rtl:space-x-reverse'>
+          <!-- <div class='hidden gap-5 items-center md:ml-6 md:flex md:space-x-6 rtl:space-x-reverse'>
+            <div>
+              <img src="" alt="">
+              <h3  class='text-sm focus:outline-none text-second-color-500 hover:text-second-color-900'>Notifications</h3>
+            </div>
+            <div>
+              <h3  class='text-sm focus:outline-none text-second-color-500 hover:text-second-color-900'>Searches</h3>
+            </div>
+            <div>
+              <h3  class='text-sm focus:outline-none text-second-color-500 hover:text-second-color-900'>Favorites</h3>
+            </div>
+            <div>
+              <h3  class='text-sm focus:outline-none text-second-color-500 hover:text-second-color-900'>Chats</h3>
+            </div>
+            <div>
+              <h3  class='text-sm focus:outline-none text-second-color-500 hover:text-second-color-900'>My Ads</h3>
+            </div>
+          </div> -->
+          <!-- <div class='hidden md:ml-6 md:flex md:space-x-6 rtl:space-x-reverse'>
             <router-link
               :class="{'border-main-color-500 text-main-color-600 font-bold': ($router.currentRoute.value.name === 'Home'),'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700': ($router.currentRoute.value.name !== 'Home')}"
               class='inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2'
@@ -37,12 +55,13 @@
               to='/help'>
               {{ $t('Help & Support') }}
             </router-link>
-          </div>
+          </div> -->
         </div>
         <div class='flex gap-5 items-center'>
+          
           <MyAddresses />
           <div class='hidden md:flex-shrink-0 md:flex md:items-center'>
-            <Languages />
+            <!-- <Languages /> -->
           </div>
           <MyNotifications v-if='this.isAuth' />
           <router-link v-if='!this.isAuth' :to='{name:"Login"}'

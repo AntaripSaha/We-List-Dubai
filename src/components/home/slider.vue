@@ -70,7 +70,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import { createNamespacedHelpers } from 'vuex'
 import SliderBackground from './partial/slider_background.vue'
-import SearchBar from './partial/search_bar.vue'
+import SearchBar from './partial/search_bar_category.vue'
 import Loader from '../partial/loader.vue'
 
 const { mapState, mapActions } = createNamespacedHelpers('slider')

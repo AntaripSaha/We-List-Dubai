@@ -27,7 +27,7 @@
   </section>
 </template>
 
-<script>
+<script>  
 
 import { StarIcon } from '@heroicons/vue/solid'
 import { createNamespacedHelpers } from 'vuex'
