@@ -1,6 +1,6 @@
 <template>
-  <div class="p-10 flex absolute custo-search inset-x-0 items-center">
-    <div class="bg-black opacity-90 m-auto rounded-lg p-5 flex w-1/2">
+  <div class="hidden sm:flex p-10  absolute custo-search inset-x-0 items-center">
+    <div class="bg-black opacity-90 m-auto rounded-lg p-5 flex w-3/4">
       <div class="w-full">
           <!-- <p class="text-lg font-semibold text-white mr-8 whitespace-nowrap ">searching in</p>  -->
           <ul class="nav nav-tabs flex flex-col items-center md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab"
@@ -224,6 +224,7 @@
   </div>
   </div>
 </template>
+
 <style scoped>
 .wrapper::before {
   content: "";
@@ -262,6 +263,7 @@ input:focus, textarea:focus, select:focus{
   bottom: -30%;
   z-index: 1;
 }
+
 }
 @media screen and (min-width: 1500px){
   .custo-search{

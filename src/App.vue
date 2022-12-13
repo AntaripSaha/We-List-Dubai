@@ -1,7 +1,7 @@
 <template>
   <TopBar />
   <HSMenu />
-  <CategoryMenu />
+  <!-- <CategoryMenu /> -->
   <router-view />
   <HSFooter />
   <Snackbar />

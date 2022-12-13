@@ -19,7 +19,7 @@
 
   <section aria-labelledby='contact-heading'
            class='relative z-10 px-4 pb-10 mx-auto -mt-40 max-w-7xl sm:px-6 lg:px-8'>
-    <div class='grid grid-cols-1 gap-y-20 lg:grid-cols-5 lg:gap-y-12 lg:gap-x-8'>
+    <div class='grid grid-cols-2 gap-y-3 gap-x-3 lg:grid-cols-5 lg:gap-y-3 lg:gap-x-3'>
       <EServiceItem v-for='eService in newestEServices' :key='eService.id' :eService='eService' />
     </div>
   </section>

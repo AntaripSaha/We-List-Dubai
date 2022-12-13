@@ -20,13 +20,13 @@
                  class='object-cover relative w-full h-full rounded-lg' />
           </div>
           <div class='flex relative items-center px-6 w-full h-48 sm:px-10 sm:h-96'>
-            <div class='w-1/3'>
-              <p :style="'color:'+slide.text_color" class='text-sm font-bold sm:text-xl lg:text-3xl'>
+            <div class='w-full'>
+              <p :style="'color:'+slide.text_color" class='text-sm font-bold sm:text-xl lg:text-3xl text-center'>
                 {{ this.$filters.transString(slide.text) }}
               </p>
-              <router-link v-if='slide.e_service_id !== null' :to='{name:"EService",params:{id:slide.e_service_id || 0}}' :style="'background-color:'+slide.button_color" class=" custom-button block px-3 py-3 w-32 rounded-full text-sm text-white text-center my-1 mx-auto">{{ this.$filters.transString(slide.button) }}</router-link>
+              <!-- <router-link v-if='slide.e_service_id !== null' :to='{name:"EService",params:{id:slide.e_service_id || 0}}' :style="'background-color:'+slide.button_color" class=" custom-button block px-3 py-3 w-32 rounded-full text-sm text-white text-center my-1 mx-auto">{{ this.$filters.transString(slide.button) }}</router-link>
               <router-link v-else-if='slide.e_provider_id !== null' :to='{name:"EProvider",params:{id:slide.e_provider_id || 0}}' :style="'background-color:'+slide.button_color" class=" custom-button block px-3 py-3 w-32 rounded-full text-sm text-white text-center my-1 mx-auto">{{ this.$filters.transString(slide.button) }}</router-link>
-              <a v-else href='#' :style="'background-color:'+slide.button_color" class=" custom-button block px-3 py-3 w-32 rounded-full text-sm text-white text-center my-1 mx-auto ">{{ this.$filters.transString(slide.button) }}</a>
+              <a v-else href='#' :style="'background-color:'+slide.button_color" class=" custom-button block px-3 py-3 w-32 rounded-full text-sm text-white text-center my-1 mx-auto ">{{ this.$filters.transString(slide.button) }}</a> -->
             </div>
           </div>
         </swiper-slide>
@@ -34,7 +34,8 @@
           <navigation v-if='slides.length > 0' class='hidden sm:flex' />
         </template>
       </swiper>
-      <SearchBar />
+      <!-- <SearchBar class="mobile" /> -->
+      <SearchBarCategory  />
     </div>
   </div>
   
@@ -58,6 +59,17 @@
     border-radius: 1rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .mobile {
+   display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .desktop {
+   display: none;
+  }
+}
+
 </style>
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -70,7 +82,8 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import { createNamespacedHelpers } from 'vuex'
 import SliderBackground from './partial/slider_background.vue'
-import SearchBar from './partial/search_bar_category.vue'
+import SearchBarCategory from './partial/search_bar_category.vue'
+import SearchBar from './partial/search_bar.vue'
 import Loader from '../partial/loader.vue'
 
 const { mapState, mapActions } = createNamespacedHelpers('slider')
@@ -83,6 +96,7 @@ export default {
     SwiperSlide,
     SliderBackground,
     SearchBar,
+    SearchBarCategory,
   },
   setup() {
       return {

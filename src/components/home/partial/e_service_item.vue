@@ -1,9 +1,9 @@
 <template>
   <div class='flex flex-col rounded-lg shadow-xl overflow-hidden'>
     <div class='flex-shrink-0'>
-      <img :src='this.$filters.getFirstMediaThumb(eService)' alt='' class='w-full object-cover'  style="height:10rem;" />
+      <img :src='this.$filters.getFirstMediaThumb(eService)' alt='' class='w-full object-cover'  style="height:8rem;" />
     </div>
-    <div class='flex-1 bg-white p-6 flex flex-col justify-between'>
+    <div class='flex-1 bg-white p-3 flex flex-col justify-between'>
       <div class='flex-1'>
         <router-link :to='{name:"EService", params:{ id:eService.id }}' class='block'>
           <p class='text-normal font-semibold text-second-color-600'>
@@ -23,9 +23,10 @@
         <div class='h-6 flex'>
           <StarIcon v-for='i in Math.ceil(eService.rate)' :key='i' aria-hidden='true' class='w-5 h-5 text-yellow-400' />
           <StarIcon v-for='i in Math.floor(5 - eService.rate)' :key='i' aria-hidden='true' class='w-5 h-5 text-gray-300' />
+          <span class="text-sm font-semibold text-second-color-500">({{ eService.total_reviews }})</span>
         </div>
-        <span class="text-sm font-semibold text-second-color-500">({{ eService.total_reviews }})</span>
-        <div class='flex flex-col pt-1 items-end  sm:pt-3'>
+        
+        <div class='flex flex-col pt-0 items-end  sm:pt-3'>
           <div v-if='eService.discount_price' class='flex items-center min-w-0 text-sm text-gray-400'>
             <!-- <span class='text-normal font-bold line-through'>{{ this.$filters.formatPrice(eService.discount_price) }} </span> -->
             <!-- <span class='text-sm '> /{{ $t(eService['price_unit'] || '') }}</span> -->
