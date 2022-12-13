@@ -111,31 +111,20 @@
               rounded-full
           " id="tabs-profile-tab" data-bs-toggle="pill" data-bs-target="#tabs-profile" role="tab"
               aria-controls="tabs-profile" aria-selected="false">Community</a>
-          </li>
-          <!-- <li class="nav-item" role="presentation">
-          <a href="#tabs-messages" class="
-              nav-link
-              block
-              font-medium
-              text-xs
-              leading-tight
-              uppercase
-              border-x-0 border-t-0 border-b-2 border-transparent
-              px-6
-              py-3
-              my-2
-              hover:border-transparent hover:bg-gray-100
-              focus:border-transparent
-          " id="tabs-messages-tab" data-bs-toggle="pill" data-bs-target="#tabs-messages" role="tab"
-              aria-controls="tabs-messages" aria-selected="false">Messages</a>
-          </li> -->
-          
+          </li>         
           </ul>
           <div class="tab-content" id="tabs-tabContent">
               <div class="tab-pane fade" id="tabs-home" role="tabpanel" aria-labelledby="tabs-home-tab">
                   <div class="flex gap-3 bg-transparent">
-                      <input type="text" class="w-5/6 text-base rounded-md p-4" placeholder="Search For Anything">
-                      <button class="bg-main-color-600 w-1/6 rounded-md font-semibold text-white hover:bg-[#0f5100]">Search</button>
+                    <input 
+                    type="text" 
+                    class="w-5/6 text-base rounded-md p-4" 
+                    placeholder="Search For Anything"
+                     @input='search'
+                    >
+                    <router-link :to='{name:"Search",params:{keywords:keywords}}' class='bg-main-color-600 w-1/6 rounded-md font-semibold text-white hover:bg-[#0f5100]'>
+                     <h4 class="text-center p-5" > Search</h4>
+                    </router-link>
                   </div>
                   
               </div>
@@ -180,7 +169,7 @@
                               ease-in-out
                               m-0
                               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                                <option selected>Select Options</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -203,7 +192,7 @@
                               ease-in-out
                               m-0
                               focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                                <option selected>Select Options</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -213,8 +202,15 @@
                   </div>
                   <hr>
                   <div class="flex gap-3 bg-transparent mt-4">
-                      <input type="text" class="w-5/6 text-base rounded-md p-4" placeholder="Search For Anything">
-                      <button class="bg-main-color-600 w-1/6 rounded-md font-semibold text-white hover:bg-[#0f5100]">Search</button>
+                      <input 
+                      type="text" 
+                      class="w-5/6 text-base rounded-md p-4" 
+                      placeholder="Search For Anything"
+                       @input='search'
+                      >
+                      <router-link :to='{name:"Search",params:{keywords:keywords}}' class='bg-main-color-600 w-1/6 rounded-md font-semibold text-white hover:bg-[#0f5100]'>
+                       <h4 class="text-center p-5" > Search</h4>
+                      </router-link>
                   </div>
               </div>
               
@@ -292,15 +288,20 @@ export default {
   components: {
     SearchBar,
   },
- 
+  computed: {
+    ...mapState('eService', {
+      keywords: state => state.keywords,
+    }),
+  },
   mounted() {
-     
+    this.updateKeywordsAction(undefined)
   },
   methods: {
     ...mapActions('eService', [
       'updateKeywordsAction',
     ]),
     search(e) {
+      this.updateKeywordsAction(e.target.value)
     },
   },
 }
